@@ -32,12 +32,20 @@ const navContent = (() => {
         location.prepend(locationText);
         //hours.before(hoursText);
         //location.before(locationText);
-
         console.log("Hurraay! Done!");
         //return homeContent;
     }
 
-    return { getHome };
+
+    const getMenu = () => {
+
+    }
+
+    const getContacts = () => {
+
+    }
+
+    return { getHome, getMenu, getContacts };
 })();
 
 export default navContent;
