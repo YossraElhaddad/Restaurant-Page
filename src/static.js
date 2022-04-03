@@ -59,9 +59,17 @@ const staticContent = (() => {
 
     const addFooter = () => {
         const footer = document.createElement('footer');
+
         const reference = document.createElement('div');
-        reference.textContent = "Images copyrights go here";
-        footer.appendChild(reference);
+        const reference1 = document.createElement('div');
+        const reference2 = document.createElement('div');
+
+        reference.textContent = "Images copyrights";
+        reference1.textContent = "merryboosters.com";
+        reference2.textContent = "delish.com";
+
+        footer.append(reference, reference1, reference2);
+        footer.setAttribute('style', 'justify-content: space-around; height: 70px;');
         return footer;
 
     }

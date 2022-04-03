@@ -91,6 +91,7 @@ ul {
     width: 500px;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 }
 
 li,
@@ -100,10 +101,10 @@ li,
     background-color: #FB7185;
     color: white;
     width: 120px;
-    height: 40px;
+    height: 70px;
     text-align: center;
     font-size: 1.5rem;
-    line-height: 40px;
+    line-height: 70px;
     padding: 3px;
     border: 0.5px solid #c5c5c5;
     font-weight: bold;
