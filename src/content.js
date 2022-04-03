@@ -3,6 +3,7 @@ import './style.css';
 const navContent = (() => {
     //const body = document.querySelector('body');
     const content = document.querySelector('#content');
+
     const getHome = () => {
         const homeContent = document.createElement('div');
 
@@ -38,6 +39,118 @@ const navContent = (() => {
 
 
     const getMenu = () => {
+        const menuContent = document.createElement('div');
+        menuContent.classList.add('menu-container');
+
+        //Create elements for the titles
+        const menuTitle = document.createElement('p');
+        const mainDishes = document.createElement('p');
+        const specialDishes = document.createElement('p');
+        const drinks = document.createElement('p');
+
+        //Add text for each title
+        menuTitle.textContent = "MENU";
+        mainDishes.textContent = "MAIN DISHES";
+        specialDishes.textContent = "SPECIAL DISHES";
+        drinks.textContent = "DRINKS";
+
+        /**************Create menu for the main dishes*************/
+
+        const chocolateBun = document.createElement('div');
+        const cupcake = document.createElement('div');
+        const zebraCake = document.createElement('div');
+        const chocoBread = document.createElement('div');
+
+        //Get images for each dish in the main dishes
+        const chocolateBunImage = document.createElement('img');
+        chocolateBunImage.src = "https://merryboosters.com/wp-content/uploads/2021/03/5-1024x576.png";
+
+        const cupcakeImage = document.createElement('img');
+        //cupcakeImage.src = "/images/cupcake.png";
+        cupcakeImage.src = "https://merryboosters.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-12-at-6.35.08-AM-1024x567.png";
+
+        const zebraCakeImage = document.createElement('img');
+        //zebraCakeImage.src = "/images/zebra_cake.png";
+        zebraCakeImage.src = "https://merryboosters.com/wp-content/uploads/2019/05/3.png";
+
+
+        const chocoBreadImage = document.createElement('img');
+        //chocoBreadImage.src = "/images/choco_bread.jpg";
+        chocoBreadImage.src = "https://merryboosters.com/wp-content/uploads/2020/01/1-1-1024x576.jpg";
+
+        //Add the content
+        chocolateBun.textContent = "Chocolate Bun   $2\n";
+        cupcake.textContent = "Vanilla Chocolate Cupcake    $3\n";
+        zebraCake.textContent = "Zebra Cake $5\n";
+        chocoBread.textContent = "Chocolate Chip Banana Bread   $5\n";
+
+        chocolateBun.appendChild(chocolateBunImage);
+        cupcake.appendChild(cupcakeImage);
+        zebraCake.appendChild(zebraCakeImage);
+        chocoBread.appendChild(chocoBreadImage);
+
+
+        /**************Create menu for the special dishes*************/
+
+        const burgerBun = document.createElement('div');
+        const oatmeal = document.createElement('div');
+        const pizza = document.createElement('div');
+        const croissant = document.createElement('div');
+
+        //Get images for each dish in the special dishes
+        const burgerBunImage = document.createElement('img');
+        //burgerBunImage.src = "/images/burger_buns.png";
+        burgerBunImage.src = "https://merryboosters.com/wp-content/uploads/2018/02/Chocolate-2.png";
+
+        const oatmealImage = document.createElement('img');
+        //oatmealImage.src = "/images/oatmeal.png";
+        oatmealImage.src = "https://merryboosters.com/wp-content/uploads/2020/02/Untitled-design-42-1024x576.png";
+
+        const pizzaImage = document.createElement('img');
+        //pizzaImage.src = "/images/pizza.png";
+        pizzaImage.src = "https://merryboosters.com/wp-content/uploads/2018/05/1-1-1024x576.png";
+
+
+        const croissantImage = document.createElement('img');
+        //croissantImage.src = "/images/croissant.png";
+        croissantImage.src = "https://merryboosters.com/wp-content/uploads/2018/04/Untitled-design-22-1024x576.png";
+
+        //Add the content
+        burgerBun.textContent = "Burger Bun $2\n";
+        oatmeal.textContent = "Oatmeal Chocolate Chip Cookies   $5\n";
+        pizza.textContent = "Special Pizza  $3\n";
+        croissant.textContent = "Special Croissant  $2\n";
+
+        burgerBun.appendChild(burgerBunImage);
+        oatmeal.appendChild(oatmealImage);
+        pizza.appendChild(pizzaImage);
+        croissant.appendChild(croissantImage);
+
+        /**************Create menu for the drinks*************/
+
+        const milkshakes = document.createElement('div');
+
+        const milkshakesImage = document.createElement('img');
+        //milkshakesImage.src = "/images/milkshakes.jpg";
+        milkshakesImage.src = "https://hips.hearstapps.com/del.h-cdn.co/assets/15/24/1600x800/landscape-1433889344-del-milkshakes-index.jpg?resize=980:*";
+
+        milkshakes.textContent = "Oreo Milkshake    $4\n\nCaramel Milkshake $4\n\nVanilla Marshmallow Milkshake $3\n\nChocolate Milkshake   $3\n\nLotus Milkshake   $5\n\nCoffee Milkshake  $3\n";
+
+        milkshakes.appendChild(milkshakesImage);
+
+        mainDishes.append(chocolateBun, cupcake, zebraCake, chocoBread);
+        specialDishes.append(burgerBun, oatmeal, pizza, croissant);
+        drinks.append(milkshakes);
+
+
+
+
+        menuContent.append(menuTitle, mainDishes, specialDishes, drinks);
+        content.appendChild(menuContent);
+
+
+
+
 
     }
 
