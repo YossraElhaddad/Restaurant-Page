@@ -4,11 +4,12 @@
 }
 
 body {
-    background-color: #FFE4E6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url('./images/chocolate_bun.png');
+    background-size: 100% auto;
 }
 
 div {
@@ -19,7 +20,7 @@ div {
 
 #content {
     border: 1px solid #3F3F46;
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
