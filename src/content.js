@@ -26,6 +26,8 @@ const navContent = (() => {
         const location = document.createElement('div');
 
         hours.textContent = "Saturday: 10:00 AM - 11:00 PM\nSunday: 8:00 AM - 9:00 PM\nMonday: 8:00 AM - 9:00 PM\nTuesday: 8:00 AM - 9:00 PM\nWednesday: 10:00 AM - 11:00 PM\nThursday: closed\nFriday: closed";
+
+        //create headlines
         const hoursText = document.createElement('p');
         const locationText = document.createElement('p');
 
@@ -44,10 +46,7 @@ const navContent = (() => {
         locationText.textContent = "Location";
         hours.prepend(hoursText);
         location.prepend(locationText);
-        //hours.before(hoursText);
-        //location.before(locationText);
-        console.log("Hurraay! Done!");
-        //return homeContent;
+
     }
 
 
@@ -157,18 +156,42 @@ const navContent = (() => {
         drinks.append(milkshakes);
 
 
-
-
         menuContent.append(menuTitle, mainDishes, specialDishes, drinks);
         content.appendChild(menuContent);
-
-
-
 
 
     }
 
     const getContacts = () => {
+        const contactsContent = document.createElement('div');
+        contactsContent.classList.add('contact-container');
+
+        const title = document.createElement('p');
+        const phoneNumber = document.createElement('div');
+        const email = document.createElement('div');
+        const socialMedia = document.createElement('div');
+
+        title.textContent = "Contacts";
+        phoneNumber.textContent = "+1 xxx-xxx-xxx";
+        email.textContent = "sweetbuns@xmail.com";
+        socialMedia.textContent = "www.facebook.com/sweetbunss";
+
+        contactsContent.append(title, phoneNumber, email, socialMedia);
+        content.appendChild(contactsContent);
+
+        //Create headlines
+        const phoneNumberText = document.createElement('p');
+        phoneNumberText.textContent = "Phone Number";
+
+        const emailText = document.createElement('p');
+        emailText.textContent = "Email";
+
+        const socialMediaText = document.createElement('p');
+        socialMediaText.textContent = "Facebook";
+
+        phoneNumber.prepend(phoneNumberText);
+        email.prepend(emailText);
+        socialMedia.prepend(socialMediaText);
 
     }
 
